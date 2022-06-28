@@ -14,6 +14,9 @@
 img {
     border-radius: 50%;
 }
+.bold {
+    font-weight: bold;
+}
 
 /* WRAPPER */
 .app_wrapper {
@@ -50,9 +53,6 @@ img {
     display: flex;
     align-items: center;
 }
-.user_name {
-    font-weight: bold;
-}
 .actions {
     justify-content: flex-end;
     padding-right: 10px;
@@ -69,4 +69,63 @@ img {
 .last_access {
     font-size: 12px;
     color: #788083;
+}
+
+/* MAIN AREA */
+.contacts_area {
+    width: 30%;
+}
+/* NOTIFICATION BANNER */
+.notification_banner {
+    background-color: #8edafb;
+    display: flex;
+    height: 60px;
+    align-items: center;
+}
+.icon_container {
+    width: 45px;
+    height: 45px;
+    border-radius: 50px;
+    background-color: #f3fbfe;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 17px;
+}
+.icon_container i {
+    color: #8edafb;
+}
+.notification_details {
+    display: flex;
+    flex-direction: column;
+    margin-left: 12px;
+}
+.activate_notifications {
+    color: #4f7484;
+}
+
+/* SEARCHBAR */
+.search_bar_area {
+    height: 30px;
+    background-color: #eaeaea;
+    padding: 5px;
+}
+.search_bar_wrapper {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+}
+.search_bar_icon {
+    width: 10%;
+}
+.search_bar_input {
+    width: 90%;
+}
+.search_bar_input input {
+    border: none;
+    padding-right: 100px;
+}
+.search_bar_icon i {
+    color: #b1b1b1;
+    width: 10px;
 }
