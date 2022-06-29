@@ -83,23 +83,54 @@
                         <!-- Search bar Area -->
                         <div class="search_bar_area">
                             <div class="search_bar_wrapper">
-                                <div class="search_bar_icon">
+                                <label for="">
                                     <i class="fa-solid fa-magnifying-glass"></i>
-                                </div>
+                                </label>
                                 <div class="search_bar_input">
                                     <input type="text" placeholder="Cerca o inizia una nuova chat">
                                 </div>
                             </div>
                             
                         </div>
+
+                        <!-- Contacts area -->
+                        <div class="chats_area">
+                            <div v-for="(contact, index) in contacts" class="single_chat">
+                                <img :src="`img/avatar${contact.avatar}.jpg`" alt="">
+                                <div class="contact_name"> {{ contact.name }} </div>
+                            </div>
+                        </div>
                     </div>
 
-                    <!-- Chat Area -->
+                    <!-- Message Area -->
+                    <div class="message_area_wrapper">
+
+                        <div class="messages_container">
+                            <div class="message sent">
+                                test
+                                <div class="date"> DATA</div>
+                            </div>
+                            <div class="message received">
+                                test
+                            </div>
+                        </div>
+
+                        <div class="message_actions">
+                            <div>
+                                <i class="fa-regular fa-face-smile"></i>
+                                <input placeholder="Scrivi un messaggio" type="text">
+                            </div>
+                            <div>
+                                <i class="fa-solid fa-microphone"></i>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
         </div>
     </div>
 
+    <script src="js/script.js"></script>
 </body>
 </html>
