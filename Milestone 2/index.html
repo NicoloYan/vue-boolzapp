@@ -95,7 +95,7 @@
 
                         <!-- Contacts area -->
                         <div class="chats_area">
-                            <div v-for="(contact, index) in contacts" class="single_chat">
+                            <div v-for="(contact, index) in contacts" @click="selectContact(index)" class="single_chat">
                                 <img :src="`img/avatar${contact.avatar}.jpg`" alt="">
                                 <div class="contact_name"> {{ contact.name }} </div>
                             </div>

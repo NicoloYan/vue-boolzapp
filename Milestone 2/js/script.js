@@ -89,6 +89,10 @@ var app = new Vue (
 					],
 				},
 			]
+		}, methods: {
+			selectContact(index) {
+				this.currentActiveContact = index;
+			},
 		}
 	}
 )
