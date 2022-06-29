@@ -180,13 +180,14 @@ img {
     display: flex;
     flex-direction: column;
     background-image: url("../img/mine.jpg");
+    height: inherit;
     flex-grow: 1;
 }
 .messages_container {
     width: 80%;
     overflow: hidden;
     margin: 60px auto;
-    height: calc(95% - 180px);
+    height: calc(95% - 140px);
 }
 .message {
     padding: 25px;
