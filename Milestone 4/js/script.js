@@ -3,8 +3,6 @@ var app = new Vue (
 		el: '#root',
 		data: {
 			currentActiveContact: 0,
-			newMessage: '',
-			stringToSearch: '',
 			contacts: [
 
 				{
@@ -91,33 +89,10 @@ var app = new Vue (
 					],
 				},
 			]
-		}, 
-		
-		methods: {
-
+		}, methods: {
 			selectContact(index) {
 				this.currentActiveContact = index;
 			},
-
-			sendMessage() {
-                this.contacts[this.currentActiveContact].messages.push({
-                    text: this.newMessage,
-                    date: '',
-					status: 'sent'
-                })
-                this.newMessage = '',
-				setTimeout(this.autoMessage, 1000) 
-
-            },
-
-			autoMessage() {
-				this.contacts[this.currentActiveContact].messages.push({
-                    text: 'ok',
-                    date: '',
-					status: 'received'
-                })
-			},
-
-		}	
+		}
 	}
 )
