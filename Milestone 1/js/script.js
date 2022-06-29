@@ -2,6 +2,7 @@ var app = new Vue (
 	{
 		el: '#root',
 		data: {
+			currentActiveContact: 0,
 			contacts: [
 
 				{
