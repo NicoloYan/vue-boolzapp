@@ -4,6 +4,7 @@ var app = new Vue (
 		data: {
 			currentActiveContact: 0,
 			newMessage: '',
+			stringToSearch: '',
 			contacts: [
 
 				{
@@ -99,7 +100,7 @@ var app = new Vue (
 			sendMessage() {
                 this.contacts[this.currentActiveContact].messages.push({
                     text: this.newMessage,
-                    date: '',
+                    date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
 					status: 'sent'
                 })
                 this.newMessage = '',
@@ -110,10 +111,23 @@ var app = new Vue (
 			autoMessage() {
 				this.contacts[this.currentActiveContact].messages.push({
                     text: 'ok',
-                    date: '',
+                    date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
 					status: 'received'
                 })
 			},
+
+			searchString() {
+				const stringToLookFor = this.stringToSearch.toLowerCase();
+				this.contacts.forEach((element) => {
+					const contactName = element.name.toLowerCase();
+
+					if(contactName.includes(stringToLookFor)) {
+						element.visible = true
+					} else {
+						element.visible = false
+					}
+				})
+			}
 		}
 	}
 )

@@ -20,7 +20,9 @@ img {
 .bold {
     font-weight: bold;
 }
-
+.active {
+    background-color: #eaeaea;
+}
 /* WRAPPER */
 
 .app_wrapper {
@@ -132,11 +134,13 @@ img {
     background-color: white;
     align-items: center;
 }
+.search_bar_input {
+    width: 100%;
+}
 .search_bar_wrapper input {
     width: 100%;
     border: none;
     padding-right: 30px;
-    font-size: 10px;
 }
 .search_bar_wrapper label i {
     margin: 0 35px;
@@ -157,7 +161,6 @@ img {
     height: 65px;
     border-bottom: 1px solid #b1b1b1;
     display: flex;
-    background-color: white;
     cursor: pointer;
     width: 100%;
 }
