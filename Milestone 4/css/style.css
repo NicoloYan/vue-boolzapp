@@ -136,7 +136,7 @@ img {
     width: 100%;
     border: none;
     padding-right: 30px;
-
+    font-size: 10px;
 }
 .search_bar_wrapper label i {
     margin: 0 35px;
@@ -181,13 +181,13 @@ img {
     flex-direction: column;
     background-image: url("../img/mine.jpg");
     flex-grow: 1;
-    overflow: hidden;
     height: inherit;
 }
 .messages_container {
     width: 80%;
     margin: 60px auto;
     height: calc(95% - 140px);
+    overflow-y: scroll;
 }
 .message {
     padding: 25px;
